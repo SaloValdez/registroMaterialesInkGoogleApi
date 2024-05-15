@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/grid__salo.css">
+    <link rel="stylesheet" href="./lib/sweetalert/swetAlert.css">
+    <script src="./lib/jquery/jquery271.js"></script>
+    <script src="./lib/sweetalert/sweetalert2@11.js"></script>
+    <!-- <script src="./lib/sweetalert/sweetAlertToast.js"></script> -->
+</head>
+<style>
+    .red{
+        background-color: aquamarine;
+    }
+</style>
+<body>
+
+    <h1>hola</h1>
+
+    <div class="red" id="btn">
+        hola
+    </div>
+
+
+    <script>
+ 	
+
+$( "#btn" ).on( "click", function() {
+    Swal.fire({
+    title: "Good job!",
+    text: "You clicked the button!",
+    icon: "success"
+  });
+
+} );
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

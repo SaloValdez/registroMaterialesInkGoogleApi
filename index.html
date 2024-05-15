@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./img/favicon/favicon.png">
     <title>Registro Materiales</title>
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/grid__salo.css">
+    <link rel="stylesheet" href="./lib/sweetalert/swetAlert.css">
     <script src="./lib/jquery/jquery271.js"></script>
     <script src="./lib/sweetalert/sweetalert2@11.js"></script>
     <script src="./lib/sweetalert/sweetAlertToast.js"></script>
@@ -16,17 +19,231 @@
         <ul>
             <li><a href="">Inicio</a></li>
             <li><a href="">Ver Registro</a></li>
-            <li><a href=""></a>Otros</li>
+            <li><a href="">Otros</a></li>
         </ul>
       </nav>
       <section>
-        <h1>esto es el cuerpo</h1>
+
+        <form action="" id="formMaterial">
+
+        <div class="contenedor__items  col_12">
+            <div class="group__input col_1" >
+                <input type="text" id="txtFecha" name="txtFecha" class="input" value=""  maxlength="10">
+                <label for="txtFecha">Fecha</label>
+            </div>
+
+            <!-- <input type="text/javascript" id="fecha" onkeydown="fechas(event);" maxlength="10"> -->
+            
+            <div class="group__input col_1 ">
+                <input type="text" id="txtSot"  name="txtSot" class="input" value=""  maxlength="8" >
+                <label for="txtSot">Sot</label>
+            </div>
+
+            <div class="group__input col_2 grup__select">
+                <select name="cbxTrabajo" id="cbxTrabajo" class="select">
+                    <option value="0" selected>Selecciona ...</option>
+                    <option value="INSTALACION">INSTALACION</option>
+                    <option value="MANTENIMIENTO">MANTENIMIENTO</option>
+                    <option value="POST-VENTA">POST-VENTA</option>
+                    <option value="TRASLADO EXTERNO">TRASLADO EXTERNO</option>
+                    <option value="TRASLADO INTERNO">TRASLADO INTERNO</option>
+                    <option value="P.ADICIONAL INTERNET">P.ADICIONAL INTERNET</option>
+                    <option value="P.ADICIONAL TELEF.">P.ADICIONAL TELEF.</option>
+                    <option value="SWITCH">SWITCH</option>
+                </select>
+                <span>Tipo Trabajo</span>
+            </div>
+            <div class="group__input col_2 grup__select ">
+                <select name="cbxTecnico" id="cbxTecnico" class="select">
+                    <option value="0">Selecciona ...</option>
+                    <option value="PATRICK">PATRICK</option>
+                    <option value="HUGO">HUGO</option>
+                    <option value="ALAN GABRIEL">ALAN GABRIEL</option>
+                    <option value="FRANKLIN">FRANKLIN</option>
+                    <option value="FELIPE">FELIPE</option>
+                </select>
+                <span>Tecnico</span>
+            </div>
+
+            <div class="group__input col_1 " id="cont__codSolucion">
+                <input type="text" id="txtCodSolucion" name="txtCodSolucion" class="input UpperCase" value="" >
+                <label for="txtCodSolucion">Cod. Sol.</label>
+            </div>
+            <div class="group__input col_1 ">
+                <input type="text" id="txtNumCintillo" class="input" value="">
+                <label for="txtNumCintillo">Cintillo</label>
+            </div>
+          
+
+        </div>
+        <div class="contenedor__items col_12">
+            <div class="group__input col_2 grup__select">
+                <select name="cbxDetalleOnt" id="cbxDetalleOnt" class="select">
+                    <option value="0">Selecciona Ont/Emta</option>
+                    <option value="F6600P">ROUTER F6600P 180000493829 ZTE</option>
+                    <option value="HG8145V5">ROUTER HG8145V5 GPON DUAL BAND 2x2</option>
+                    <option value="HG8245W5-6T">ROUTER HG8245W5-6T DUAL BAND 4x4</option>
+                    <option value="WA8021V5">REPETIDOR WA8021V5 GPON HUAWEI</option>
+                    <option value="SWITCH">SWITCH D-LINK DGS-1008A</option>
+                </select>
+                <span>Ont</span>
+            </div>
+            <div class="group__input col_3 ">
+                <input type="text" id="txtSerieOnt"  name="txtSerieOnt" class="input" value="" >
+                <label for="txtSerieOnt">Serie Ont/Emta</label>
+            </div>
+            <!-- <div class="group__input col_3 ">
+                <input type="text" id="txtMacOnt" class="input" value="" >
+                <label for="txtMacOnt">MAC Ont/Emta</label>
+            </div> -->
+        </div>
+        <div class="contenedor__items col_12">
+            <div class="group__input col_4 grup__select">
+                <select name="cbxDetalleIptv" id="cbxDetalleIptv"  name="cbxDetalleIptv" class="select" search="true" placeholder="Mode of enquiry">
+                    <!-- <option value="">Selecciona Deco/Iptv</option> -->
+                    <option value="0">Selecciona...</option>
+                    <option value="IPTV">DECODIFICADOR IPTV ZXV10 B866V2</option>
+ 
+                </select>
+                <span>Iptv</span>
+            </div>
+            <div class="group__input col_3 ">
+                <input type="text" id="txtSerie1" name="txtSerie1" class="input" value="" >
+                <label for="txtSerie1">Serie 1</label>
+            </div>
+            <div class="group__input col_3 ">
+                <input type="text" id="txtSerie2" name="txtSerie2" class="input" value="" >
+                <label for="txtSerie2">Serie 2</label>
+            </div>
+            <div class="group__input col_3 ">
+                <input type="text" id="txtSerie3" name="txtSerie3" class="input" value="" >
+                <label for="txtSerie3">Serie 3</label>
+            </div>
+            <div class="group__input col_3 ">
+                <input type="text" id="txtSerie4"  name="txtSerie4" class="input" value="" >
+                <label for="txtSerie4">Serie 4</label>
+            </div>
+            <div class="group__input col_3 ">
+                <input type="text" id="txtSerie5" name="txtSerie5" class="input" value="" >
+                <label for="txtSerie5">Serie 5</label>
+            </div>
+         
+
+        </div>
+
+        <div class="contenedor__items col_12">
+            <div class="group__input col_2 grup__select ">
+                <select name="cbxTipoControles" id="cbxTipoControles" class="select" search="true" placeholder="Mode of enquiry">
+                    <!-- <option value="">Selecciona Deco/Iptv</option> -->
+                    <option value="0">Selecciona...</option>
+                    <option value="AMCO">CONTROL REMOTO AMCO CERVINO ATV-BLACK</option>
+                    <option value="UNIV">AREQUIPO CONTROL REMOTO UNIV URC NEGRO</option>
+                </select>
+                <span>Controles</span>
+            </div>
+            <div class="group__input col_1">
+                <input type="text" id="txtCantidadControles"  name="txtCantidadControles" class="input" value="" >
+                <label for="txtCantidadControles">Cant.controles</label>
+            </div>
+            <div class="group__input col_1">
+                <input type="text" id="txtCantidadHdmi" name="txtCantidadHdmi" class="input" value="" >
+                <label for="txtCantidadHdmi">HDMI</label>
+            </div>
+
+            <div class="group__input col_2  grup__select">
+                <select name="cbxTelefono" id="cbxTelefono" class="select" search="true">
+                    <!-- <option value="">Selecciona Deco/Iptv</option> -->
+                    <option value="">Selecciona...</option>
+                    <option value="">TELEFONO ECS622 ECOSS</option>
+                    <option value="">TELEFONO ALCATEL T56 EX SIN PILAS </option>
+                </select>
+                <span>Telefono</span>
+            </div>
+            <div class="group__input col_1">
+                <button class="btn__span" id="btnKitBasico">Kit Básico</button>
+                
+            </div>
+            <div class="group__input col_1">
+                <button class="btn__span" id="btnBorrarKit">Borrar</button>
+                
+            </div>
+        </div>
+
+        <div class="contenedor__items col_12">
+            <div class="group__input col_1">
+                <input type="text" id="txtUtp" name="txtUtp  " class="input" value="" >
+                <label for="txtUtp">Cab. UTP</label>
+            </div>
+            <div class="group__input col_1">
+                <input type="text" id="txtConectorRj45"  name="txtConectorRj45" class="input" value="" >
+                <label for="txtConectorRj45">Conector RJ45</label>
+            </div>
+            <div class="group__input col_1">
+                <input type="text" id="txtConectorRj11"  name="txtConectorRj11"  class="input" value="" >
+                <label for="txtConectorRj11">Conector RJ11</label>
+            </div>
+            <div class="group__input col_1">
+                <input type="text" id="txtRosetaTel"  name="txtRosetaTel" class="input" value="" >
+                <label for="txtRosetaTel">Rost. Telef.</label>
+            </div>
+            <div class="group__input col_1">
+                <input type="text" id="txtChapaQ" name="txtChapaQ" class="input" value="" >
+                <label for="txtChapaQ">Chapa Q</label>
+            </div>
+            <div class="group__input col_1">
+                <input type="text" id="txtChapaP"  name="txtChapaP"  class="input" value="" >
+                <label for="txtChapaP">Chapa P</label>
+            </div>
+            <div class="group__input col_1">
+                <input type="text" id="txtCintilloRojo" name="txtCintilloRojo" class="input" value="" >
+                <label for="txtCintilloRojo">Cintillo Rojo</label>
+            </div>
+        </div>
+
+        <div class="contenedor__items col_12">
+            <div class="group__input col_2 grup__select">
+                <select name="cbxDrop" id="cbxDrop" name="cbxDrop" class="select" search="true" placeholder="Mode of enquiry">
+                    <!-- <option value="">Selecciona Deco/Iptv</option> -->
+                    <option value="0" selected>Seleccione...</option>
+                    <option value="50">50</option>
+                    <option value="80">80</option>
+                    <option value="100">100</option>
+                    <option value="150">150</option>
+                    <option value="220">220</option>
+                </select>
+                <span>Drop</span>
+            </div>
+
+        </div>
+
+        <div class="contenedor__items col_12">
+           
+            <div class="group__input col_1">
+                <input type="text" id="txtConectorOpt"  name="txtConectorOpt" class="input" value="" >
+                <label for="txtConectorOpt">Conect. OPT</label>
+            </div>
+            <div class="group__input col_1">
+                <input type="text" id="txtRosetaOpt"  name="txtRosetaOpt" class="input" value="" >
+                <label for="txtRosetaOpt">Roseta OPT</label>
+            </div>
+            <div class="group__input col_1">
+                <input type="text" id="txtCableFibra" name="txtCableFibra" class="input" value="" >
+                <label for="txtCableFibra">Cable Fibra</label>
+            </div>
+        </div>
+     
+        <div class="group__input col_2">
+            <button type="submit" class="btn__succes" id="btnInsertarMaterial">Insertar</button>
+        </div>
+      
+
+        </form>
       </section>
 
 
 
 
     </div>
-    <script src="./js/index.js"></script>
+    <script src="./js/registro.js"></script>
 </body>
 </html>

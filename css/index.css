@@ -11,8 +11,8 @@
 }
 
 :root{
-    --primaryColor: red;
-    --SecondaryColor :blue;
+    --primaryColor:  royalblue;
+    --SecondaryColor :rgb(243, 32, 141);
 }
 *{
     margin: 0;
@@ -23,5 +23,162 @@
 body{
     font-family: PoppinsRegular;
     font-size: 1em;
+    background-color: rgb(232, 232, 232);
 }
 
+.contenedor{
+    /* border: 1px solid red; */
+    width: 80%;
+    margin: auto;
+    background-color: white;
+}
+
+/* menu */
+    nav ul{
+        display: flex;
+        background-color: royalblue;
+    }
+    nav ul li{
+        list-style: none;
+    }
+    nav ul li a{
+        text-decoration: none;
+        /* border: 1px solid black; */
+        padding: 5px;
+        display: block;
+        color: white;
+    }
+    nav ul li a:hover{
+        background-color: rgb(62, 107, 243);
+        cursor: pointer;
+    }
+/* fin menu */
+/* SECTION */
+    section{
+        padding: 10px;
+        height: 500px;
+        padding-top: 20px;
+    }
+/* FIN seccion */
+
+/* Estilos Formulario */
+    .group__input{
+        position: relative;
+        display:table;
+        /* width: 100%; */
+        margin: 5px;
+        margin-top: 16px;
+        /* border: 1px solid red; */
+        
+    }
+    
+    .input{
+        font-family: poppinsRegular;
+        padding: 5px;
+        font-size: 1em;
+        border-radius: 5px;
+        border: 1px solid var(--primaryColor);
+        width: 100%;
+    }
+
+    .group__input label{
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        color: rgb(96, 96, 96);
+        transition:all 0.2s;
+    }
+    .group__input .input:is(:focus,:valid) +  label{
+        top: -15px;
+        background-color: white;
+        font-size: 0.9em;
+        padding-left: 5px;
+        padding-right: 5px;
+        color: var(--primaryColor)
+    }
+
+    .contenedor__items{
+        display: flex;
+        /* border: 1px solid black; */
+    }
+
+    .select{
+        width: 100%;
+        background-color:rgb(208, 208, 208);
+        font-size: 1em;
+        padding: 5px;
+        border: 2px solid var(--primaryColor);
+        border-radius: 5px;
+        color:  var(--primaryColor);
+        font-weight: bold;
+        font-family: poppinsRegular;
+        z-index: 2;
+    }
+    .select option{
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        /* background-color: red; */
+    }
+
+    .select option:hover{
+    background-color: var(--primaryColor);
+    }
+    .btn__succes{
+        /* width: 100%; */
+        font-size: 1em;
+        padding: 5px 15px 5px 15px;
+        border: 1px solid var(--primaryColor);
+        border-radius: 5px;
+        color: white;
+        font-family: poppinsRegular;
+        background-color:  var(--primaryColor);
+        transform: scale(1);  
+    }
+    .btn__succes:hover{
+        cursor: pointer;
+        background-color: rgb(35, 35, 168)
+    }
+    .btn__succes:active{
+        transform: scale(1.03);
+    }
+
+    .btn__span{
+        /* width: 100%; */
+        font-size: 1em;
+        padding: 5px 15px 5px 15px;
+        border: 1px solid var(--primaryColor);
+        border-radius: 5px;
+        color: white;
+        font-family: poppinsRegular;
+        background-color: rgb(170, 170, 170);
+        transform: scale(1);  
+    }
+    .btn__span:hover{
+        cursor: pointer;
+        background-color:rgb(133, 133, 133);
+    }
+    .btn__span:active{
+        transform: scale(1.03);
+    }
+
+
+
+
+    .grup__select{
+        position: relative;
+        display: flex;
+    }
+    .grup__select span{
+        position:absolute;
+        margin-left: 8px;
+        top: -17px;
+        color: var(--primaryColor);
+        background-color: white;
+        display: table;
+        padding: 0px 0px 0px 0px;
+        text-align: center;
+        padding-bottom: -5px;
+        z-index: 1;
+        font-size: 0.8em;
+    }
+/* Fin Estillos formulario */
