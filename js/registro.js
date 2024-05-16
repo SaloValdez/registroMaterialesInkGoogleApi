@@ -17,8 +17,9 @@ $(document).ready(function() {
             $('#txtConectorOpt').val('');
           }
         })
-     
 });
+
+
 
 // registro material
 function registrarMaterial(){
@@ -134,22 +135,21 @@ function convertirMayuscula(){
 
 
 
-   function manipulacionFecha(){
-    var flag1 = true;
-    var flag2 = true;
-    $(document).on('keyup','[id=fecha]',function(e){
-        if($(this).val().length == 2 && flag1) {
-            $(this).val($(this).val()+"/");
-            console.log(flag1)
-            flag1 = true;
-        } else if($(this).val().length == 5 && flag1) {
-            $(this).val($(this).val()+"/2024");
-            flag1 = true;
-        }
-      
-    });
-   }
-
+  function manipulacionFecha(){
+  var flag1 = true;
+  var flag2 = true;
+  $(document).on('keyup','[id=fecha]',function(e){
+      if($(this).val().length == 2 && flag1) {
+          $(this).val($(this).val()+"/");
+          console.log(flag1)
+          flag1 = true;
+      } else if($(this).val().length == 5 && flag1) {
+          $(this).val($(this).val()+"/2024");
+          flag1 = true;
+      }
+    
+  });
+  }
 
    function cantControles(){
     $("select[name=cbxTipoControles]").change(function(){
